@@ -5,3 +5,10 @@ script:
 - npm test
 - node_modules/.bin/jshint src
 
+deploy:
+- provider: pages
+- skip-cleanup: true
+- github-token: $GITHUB_TOKEN
+- keep-hhistory: true
+- on:
+branch: master
